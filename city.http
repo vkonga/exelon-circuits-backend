@@ -1,0 +1,33 @@
+### Add a new city
+POST http://localhost:3000/cities
+Content-Type: application/json
+
+{
+    "id": 6,
+    "name": "blackpool",
+    "population": 500000,
+    "country": "UK",
+    "latitude": 12.34,
+    "longitude": 56.78
+}
+
+### Update an existing city
+PUT http://localhost:3000/cities/1
+Content-Type: application/json
+
+{
+  "name": "Updated City",
+  "population": 600000,
+  "country": "Updated Country",
+  "latitude": 23.45,
+  "longitude": 67.89
+}
+
+### Delete a city
+DELETE http://localhost:3000/cities/1
+
+### Get all cities with optional query parameters
+GET http://localhost:3000/cities?search=Sample&sortBy=name&order=ASC&limit=5&offset=0
+
+### Get all cities without query parameters
+GET http://localhost:3000/cities
